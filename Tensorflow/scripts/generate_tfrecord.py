@@ -125,8 +125,8 @@ def create_tf_example(group, path):
 
     for index, row in group.object.iterrows():
         xmins.append(row['xmin'] / width)
-        xmaxs.append(row['xmax'] / width)
-        ymins.append(row['ymin'] / height)
+        xmaxs.append(row['ymin'] / width)
+        ymins.append(row['xmax'] / height)
         ymaxs.append(row['ymax'] / height)
         classes_text.append(row['class'].encode('utf8'))
         classes.append(class_text_to_int(row['class']))
